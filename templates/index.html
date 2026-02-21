@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Housing Trends</title>
+    <style>
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f1f5f8;
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: linear-gradient(to right, #1f2a36, #2c3e50);
+            color: white;
+            padding: 12px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .navbar h2 { margin: 0; font-size: 20px; }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0; padding: 0;
+            display: flex;
+            gap: 25px;
+        }
+
+        .navbar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .navbar ul li a:hover { color: #ff5722; }
+
+        section {
+            min-height: 100vh;
+            padding: 100px 40px 40px;
+            box-sizing: border-box;
+        }
+
+        /* HOME */
+        #home {
+            background-image: url("https://images.unsplash.com/photo-1568605114967-8130f3a36994");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #home::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(15, 26, 36, 0.75);
+        }
+
+        .home-content { position: relative; max-width: 900px; }
+
+        .home-content h1 { font-size: 38px; margin-bottom: 20px; }
+
+        .home-content button {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+
+        /* ABOUT */
+        .about-container {
+            max-width: 1200px;
+            margin: auto;
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .about-container img {
+            width: 520px;
+            max-width: 100%;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+
+        .about-text h3 { margin-top: 0; font-size: 22px; color: #1f2a36; }
+
+        .about-text ul { list-style: none; padding: 0; }
+
+        .about-text li {
+            margin-bottom: 14px;
+            line-height: 1.6;
+            color: #444;
+            position: relative;
+            padding-left: 28px;
+        }
+
+        .about-text li::before {
+            content: "✔";
+            position: absolute;
+            left: 0;
+            color: #ff5722;
+            font-weight: bold;
+        }
+
+        .embed-container {
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        /* Previous Section Button */
+        #prevSectionBtn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 2000;
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 6px;
+            font-size: 22px;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        #prevSectionBtn:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar">
+    <h2>Housing Trends</h2>
+    <ul>
+        <li><a href="#home">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#dashboard">DASHBOARD</a></li>
+        <li><a href="#story">STORY</a></li>
+    </ul>
+</div>
+
+<!-- HOME -->
+<section id="home">
+    <div class="home-content">
+        <h1>VISUALIZING HOUSING SALES TRENDS AND ITS PRICES.</h1>
+        <button onclick="document.getElementById('about').scrollIntoView()">GET STARTED</button>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="about-container">
+        <img src="https://images.unsplash.com/photo-1501183638710-841dd1904471" alt="Building">
+        <div class="about-text">
+            <h3>Visualizing Housing Market Trends: An Analysis of Sale Prices and Features using Tableau</h3>
+            <ul>
+                <li>The goal is to address challenges in understanding the factors that influence house prices and sales trends.</li>
+                <li>By analysing comprehensive housing data, including the total sales by years since renovation, house age distribution by the number of bathrooms, bedrooms, and floors, and the impact of renovations on house age, the company aims to uncover key insights.</li>
+                <li>Utilizing Tableau for this analysis, the objective is to visualize and interpret patterns in the housing market to inform strategic decisions, optimize pricing strategies, and enhance overall market competitiveness.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard">
+    <div class="embed-container">
+        <div class='tableauPlaceholder' id='viz1771581104568' style='position: relative'>
+            <noscript>
+                <a href='#'>
+                    <img alt='Comprehensive House Price Analysis'
+                         src='https://public.tableau.com/static/images/Da/DataAnalyticsproject_17715810828860/Dashboard1/1_rss.png'
+                         style='border: none' />
+                </a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='DataAnalyticsproject_17715810828860/Dashboard1' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https://public.tableau.com/static/images/Da/DataAnalyticsproject_17715810828860/Dashboard1/1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+                <param name='filter' value='publish=yes' />
+            </object>
+        </div>
+        <script type='text/javascript'>
+            var divElement = document.getElementById('viz1771581104568');
+            var vizElement = divElement.getElementsByTagName('object')[0];
+            vizElement.style.width='1400px';
+            vizElement.style.height='827px';
+            var scriptElement = document.createElement('script');
+            scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement.parentNode.insertBefore(scriptElement, vizElement);
+        </script>
+    </div>
+</section>
+
+<!-- STORY -->
+<section id="story">
+    <div class="embed-container">
+        <div class='tableauPlaceholder' id='viz1771581398742' style='position: relative'>
+            <noscript>
+                <a href='#'>
+                    <img alt='Story 1'
+                         src='https://public.tableau.com/static/images/Da/DataAnalyticsproject_17715810828860/Story1/1_rss.png'
+                         style='border: none' />
+                </a>
+            </noscript>
+            <object class='tableauViz' style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                <param name='embed_code_version' value='3' />
+                <param name='site_root' value='' />
+                <param name='name' value='DataAnalyticsproject_17715810828860/Story1' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https://public.tableau.com/static/images/Da/DataAnalyticsproject_17715810828860/Story1/1.png' />
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-US' />
+                <param name='filter' value='publish=yes' />
+            </object>
+        </div>
+        <script type='text/javascript'>
+            var divElement2 = document.getElementById('viz1771581398742');
+            var vizElement2 = divElement2.getElementsByTagName('object')[0];
+            vizElement2.style.width='1400px';
+            vizElement2.style.height='927px';
+            var scriptElement2 = document.createElement('script');
+            scriptElement2.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+            vizElement2.parentNode.insertBefore(scriptElement2, vizElement2);
+        </script>
+    </div>
+</section>
+
+<!-- Previous Section Button -->
+<button id="prevSectionBtn" title="Go to previous section">↑</button>
+
+<script>
+    const sections = Array.from(document.querySelectorAll("section"));
+    const prevBtn = document.getElementById("prevSectionBtn");
+
+    // Show button after scrolling
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            prevBtn.style.display = "block";
+        } else {
+            prevBtn.style.display = "none";
+        }
+    });
+
+    function getCurrentSectionIndex() {
+        let currentIndex = 0;
+        const scrollPos = window.scrollY + window.innerHeight / 3;
+
+        sections.forEach((section, index) => {
+            if (section.offsetTop <= scrollPos) {
+                currentIndex = index;
+            }
+        });
+
+        return currentIndex;
+    }
+
+    // Go to previous section on click (NO SKIPPING)
+    prevBtn.addEventListener("click", () => {
+        const currentIndex = getCurrentSectionIndex();
+        const prevIndex = Math.max(0, currentIndex - 1);
+        sections[prevIndex].scrollIntoView({ behavior: "smooth" });
+    });
+</script>
+
+</body>
+</html>
